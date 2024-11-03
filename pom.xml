@@ -49,6 +49,7 @@
 	</dependencies>
 
 	<build>
+	<finalName>wellsaid</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
