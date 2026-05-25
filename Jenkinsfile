@@ -4,6 +4,15 @@ pipeline{
         jdk 'java-8'
     }
     stages{
+        stage('Clone') {
+
+            steps {
+
+                git branch: "${params.BRANCH_NAME.replace('origin/','')}",
+                    credentialsId: 'github-creds',
+                    url: 'https://github.com/MassShaik2026/employee-service.git'
+            }
+        }
         stage('Compile'){
             steps{
               bat 'mvn compile'
